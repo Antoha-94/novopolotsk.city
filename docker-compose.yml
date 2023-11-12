@@ -1,0 +1,35 @@
+version: '3.3'
+
+services:
+  wordpress:
+    image: wordpress
+    restart: always
+    ports:
+      - "8080:80"
+    environment:
+      - MYSQL_DATABASE=
+    volumes:
+      - ./wp-content:/var/www/html/wp-content
+
+  db:
+    image: mysql:5.7
+    container_name: mysqldb
+    restart: always
+    environment:
+      MYSQL_DATABASE: 
+      MYSQL_USER: 
+      MYSQL_PASSWORD: 
+      MYSQL_ROOT_PASSWORD: 
+    volumes:
+      - ./db:/var/lib/mysql
+
+  phpmyadmin:
+     image: phpmyadmin/phpmyadmin
+     container_name: phpmyadmin
+     environment:
+         - PMA_ARBITRARY=1
+         - PMA_HOST=mysqldb
+     links:
+         - db
+     ports:
+         - 8081:80
