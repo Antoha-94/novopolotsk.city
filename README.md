@@ -8,10 +8,10 @@
 -Пароль для root-пользователя(MYSQL_ROOT_PASSWORD)
 4. В дериктории с docker-compose.yml выполняем билд командой: docker compose up -d --build
 5. Даем пользователю БД root доступ: 
--переходим в контейнер mySQL: docker exec -it mysqldb bash
--получаем доступ к оболочке mySQL после ввода root пароля: mysql -u root -p
--даем права пользователю: GRANT ALL PRIVILEGES ON *.* TO 'ИмяПользователя'@'%' IDENTIFIED BY 'ПарольПользователя' WITH GRANT OPTION; 
--Выполняем команду, чтобы изманенеия вступили в силу: FLUSH PRIVILEGES; 
+- переходим в контейнер mySQL: docker exec -it mysqldb bash
+- получаем доступ к оболочке mySQL после ввода root пароля: mysql -u root -p
+- даем права пользователю: GRANT ALL PRIVILEGES ON *.* TO 'ИмяПользователя'@'%' IDENTIFIED BY 'ПарольПользователя' WITH GRANT OPTION; 
+- Выполняем команду, чтобы изманенеия вступили в силу: FLUSH PRIVILEGES; 
 6. Открываем в браузере: 127.0.0.1:8080 и настраиваем WordPress
 
 
