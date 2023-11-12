@@ -1,6 +1,6 @@
 Описание:
 1. В этом проекте: шаблон wordPress + mySQL + phpMyAdmin + apache - в docker container.
-2. Для установки с gita: перейти в дерикторию проекта, и выполнить git clone git@github.com:Antoha-94/novopolotsk.city
+2. Для установки с gita: перейти в дерикторию проекта, и выполнить git clone https://github.com/Antoha-94/novopolotsk.city.git 
 3. В docker-compose.yml до билда обязательно указать 4 параметра:
 -Имя БД (MYSQL_DATABASE)
 -Имя пользователя БД (MYSQL_USER)
